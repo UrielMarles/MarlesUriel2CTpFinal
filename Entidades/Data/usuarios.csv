@@ -1,0 +1,9 @@
+id,contrasenia,activo,cantidadVentas,nombre,telefono,esAdmin
+-1,malito,True,0,WilliamAfton,+54 9 11 62666 6666,True
+-1,buenito,True,0,HenryEmily,+36 7 420 12420,True
+-1,inteligente,True,0,MatPat,+543215149,True
+-1,conejita,True,0,Vanny,+54899415213,True
+-1,hijito,True,1,MichaelAfton,+54 9 1211 4194 3822,False
+-1,hijita,True,0,ElizabethAfton,+54 9 21311 4194 3822,False
+-1,puppet,True,0,Charlotte,+54 9 11 4194 3822,False
+-1,Crying,True,0,ChildeAfton,+65849874615,False

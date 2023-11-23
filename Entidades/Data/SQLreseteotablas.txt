@@ -1,0 +1,69 @@
+﻿DROP TABLE cantidades
+DROP TABLE animatronicosFiestas
+DROP TABLE animatronicos
+DROP TABLE fiestas
+DROP TABLE usuarios
+
+CREATE TABLE usuarios(
+id INT IDENTITY(1,1) PRIMARY KEY,
+contrasenia VARCHAR(50),
+activo BIT not null,
+cantidadVentas INT not null,
+nombre VARCHAR(50) UNIQUE not null,
+telefono VARCHAR(50) UNIQUE not null,
+esAdmin BIT not null
+);
+
+CREATE TABLE cantidades(
+id INT IDENTITY(1,1) PRIMARY KEY,
+activo BIT not null,
+cantidad INT not null,
+nombre VARCHAR(50) UNIQUE not null
+);
+
+CREATE TABLE animatronicos (
+id INT IDENTITY(1,1) PRIMARY KEY,
+nombre VARCHAR(50) not null,
+descripcion VARCHAR(200) not null,
+activo BIT not null,
+cantidadAlmas int not null,
+creadoPorId int not null
+FOREIGN KEY (creadoPorId) REFERENCES usuarios(id),
+);
+
+CREATE TABLE fiestas(
+id INT IDENTITY(1,1) PRIMARY KEY,
+lugar VARCHAR(100) not null,
+precio INT not null,
+activo BIT not null,
+nombre VARCHAR(50) UNIQUE not null,
+telefonoCliente VARCHAR(50) not null,
+correoCliente VARCHAR(50) not null,
+fecha DATE not null,
+adminFiestaId int not null
+FOREIGN KEY (adminFiestaId) REFERENCES usuarios(id),
+);
+
+CREATE TABLE animatronicosFiestas(
+id INT IDENTITY(1,1) PRIMARY KEY,
+activo BIT not null,
+fiestaId INT not null,
+animatronicoId INT not null,
+FOREIGN KEY (fiestaId) REFERENCES fiestas(id),
+FOREIGN KEY (animatronicoId) REFERENCES animatronicos(id)
+);
+
+DELETE FROM animatronicos;
+DBCC CHECKIDENT('animatronicos', RESEED, 0);
+
+DELETE FROM fiestas;
+DBCC CHECKIDENT('fiestas', RESEED, 0);
+
+DELETE FROM cantidades;
+DBCC CHECKIDENT('cantidades', RESEED, 0);
+
+DELETE FROM usuarios;
+DBCC CHECKIDENT('usuarios', RESEED, 0);
+
+DELETE FROM usuarios;
+DBCC CHECKIDENT('animatronicosFiestas', RESEED, 0);

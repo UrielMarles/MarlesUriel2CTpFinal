@@ -1,0 +1,12 @@
+id,nombre,descripcion,activo,cantidadAlmas,creadoPorId
+-1,Freddy,El iconico Freddy! En buenas condiciones. Se encuenta en el mismo estado que durante FNAF 1,True,3,0
+-1,Foxy, Foxy el pirata. toca el bandoneon y tiene un loro que lo acompaña,True,2,0
+-1,Chica,Chica y su muffin alegran todas las fiestas repartiendo golosinas y regalos,True,1,0
+-1,Bonnie, Bonnie el conejo. Salta de aqui para alla tocando el banjo,True,2,0
+-1,Puppet, Puppet la marioneta de seguridad se encargara de que los niños no se pierdan de la vista,True,0,1
+-1,Toy Freddy, Freddy en una version mas inantil. parece un muñeco y es para fiestas de los mas pequeños,True,0,1
+-1,Toy Chica, Chica hecha para cumpleaños al aire libre. resistente al agua y preparada para cantar,True,0,1
+-1,Baloon Boy, Baloon boy reparte globos y a cambio de monedas dara golosinas,True,3,1
+-1,DJ MUSIC MAN, MUUUUUUUUUUUUUUUUUUUUUUUUUUUUUSIC MANNNNNNNNN,True,0,2
+-1,SPRINGTRAP, VA A MATAR A TODOS LOS NENES XDXDXDD,False,3,0
+-1,Mangle, WAS THAT THE BITE OF 87??,False,3,1
