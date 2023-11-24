@@ -4,16 +4,32 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BACK.Herramientas
 {
     public static class FilesManager
     { 
-        public static void ResetearTablas(ConexionConTabla connect)
+        public static string RutaPadreDesdeFront
+        {
+            get
+            {
+                string st = Directory.GetCurrentDirectory();
+                string patron = @"^(.*\\RENT-A-TRONIC\\)";
+                Regex regex = new Regex(patron);
+                Match match = regex.Match(st);
+                string pathHastaCarpeta = match.Groups[1].Value;
+                string nuevaCadena = pathHastaCarpeta.Substring(0, pathHastaCarpeta.Length - 14);
+                return nuevaCadena;
+            }
+                                
+
+    }
+    public static void ResetearTablas(ConexionConTabla connect)
         {
             string contenido;
-            using (FileStream fs = new FileStream("D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\Data\\SQLreseteotablas.txt", FileMode.Open))
+            using (FileStream fs = new FileStream($"{RutaPadreDesdeFront}Entidades\\Data\\SQLreseteotablas.txt", FileMode.Open))
             {
                 using (StreamReader sr = new StreamReader(fs))
                 {
@@ -27,7 +43,7 @@ namespace BACK.Herramientas
             foreach(InterfazEntidades entidad in listaTablas)
             {
                 string nombre = entidad.NombreTabla;
-                string rutaCsv = Path.Combine("D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\Data\\", $"{nombre}.csv");
+                string rutaCsv = Path.Combine($"{RutaPadreDesdeFront}Entidades\\Data\\", $"{nombre}.csv");
                 List<Dictionary<string, string>> listaFilasCsv = rutaCsv.ConvertirCsv();
                 foreach(Dictionary<string,string> dict in listaFilasCsv)
                 {
@@ -40,7 +56,7 @@ namespace BACK.Herramientas
 
         public static void GuardarUnBackup(List<List<Dictionary<string,string>>> listaTablas,List<string> nombresTablas)
         {
-            string ruta = "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\Backups\\";
+            string ruta = $"{RutaPadreDesdeFront}Entidades\\Backups\\";
             int nroBackup = 1;
             while (Directory.Exists($"{ruta}{nroBackup}"))
             {

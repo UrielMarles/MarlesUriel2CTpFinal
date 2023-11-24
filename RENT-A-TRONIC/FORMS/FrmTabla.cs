@@ -42,20 +42,7 @@ namespace RENT_A_TRONIC
             textBoxBusqueda.BringToFront();
         }
 
-        public void AsignarTipo()
-        {
-            InterfazEntidades asignarTipo = new T();
-            switch (asignarTipo.NombreTabla)
-            {
-                case "animatronicos":
-                    this.tipo = EtipoTabla.Animatronicos;
-                    break;
-                case "fiestas":
-                    this.tipo = EtipoTabla.Fiestas; break;
-                case "usuarios":
-                    this.tipo = EtipoTabla.Usuarios; break;
-            }      
-        }
+        
         public void ActualizarTabla()
         {
             ActualizarTabla(true);
@@ -78,35 +65,46 @@ namespace RENT_A_TRONIC
             btn_nuevo.Update();
             Thread.Sleep(100);
             btn_nuevo.Image = Resources.nuevo_horver;
-            switch (tipo)
+            bool entrar = true;
+            if (tablaInfo.SelectedRows.Count == 1)
             {
-                case EtipoTabla.Fiestas:
-                    this.Hide();
-                    frmManejoFiesta frmfiesta = new frmManejoFiesta(conect,user);
-                    this.Show();
-                    break;
-                case EtipoTabla.Animatronicos:
-                    if (await validarAdmin())
-                    {
+                if (((InterfazEntidades)tablaInfo.SelectedRows[0].DataBoundItem).Activo)
+                {
+                    entrar = false;
+                }
+            }
+            if (entrar)
+            {
+                switch (tipo)
+                {
+                    case EtipoTabla.Fiestas:
                         this.Hide();
-                        frmManejoAnimatronico frmNuevoAnimatronico = new frmManejoAnimatronico(conect, user);
-                        frmNuevoAnimatronico.ShowDialog();
+                        frmManejoFiesta frmfiesta = new frmManejoFiesta(conect, user);
                         this.Show();
-                    }
-                    break;
-                case EtipoTabla.Usuarios:
-                    if (user.EsAdmin)
-                    {
-                        this.Hide();
-                        frmManejoUsuario frmNuevoUsuario = new frmManejoUsuario(conect);
-                        frmNuevoUsuario.ShowDialog();
-                        this.Show();
-                    }
-                    else
-                    {
-                        await Task.Run(async () => { errorTxt.Invoke((MethodInvoker)delegate { errorTxt.Text = "no tienes permiso"; }); await Task.Delay(500); errorTxt.Invoke((MethodInvoker)delegate { errorTxt.Text = ""; }); });   
-                    }
-                    break;
+                        break;
+                    case EtipoTabla.Animatronicos:
+                        if (await validarAdmin())
+                        {
+                            this.Hide();
+                            frmManejoAnimatronico frmNuevoAnimatronico = new frmManejoAnimatronico(conect, user);
+                            frmNuevoAnimatronico.ShowDialog();
+                            this.Show();
+                        }
+                        break;
+                    case EtipoTabla.Usuarios:
+                        if (user.EsAdmin)
+                        {
+                            this.Hide();
+                            frmManejoUsuario frmNuevoUsuario = new frmManejoUsuario(conect);
+                            frmNuevoUsuario.ShowDialog();
+                            this.Show();
+                        }
+                        else
+                        {
+                            await Task.Run(async () => { errorTxt.Invoke((MethodInvoker)delegate { errorTxt.Text = "no tienes permiso"; }); await Task.Delay(500); errorTxt.Invoke((MethodInvoker)delegate { errorTxt.Text = ""; }); });
+                        }
+                        break;
+                }
             }
             ActualizarTabla();
             
@@ -150,42 +148,54 @@ namespace RENT_A_TRONIC
         private async void btn_editar_Click(object sender, EventArgs e)
         {
             btn_editar.Image = Resources.editar_apretado;
-            switch (tipo)
+            bool entrar = true;
+            if(tablaInfo.SelectedRows.Count == 1 )
             {
-                case EtipoTabla.Fiestas:
-                    if(tablaInfo.SelectedRows.Count == 1)
-                    {
-                        this.Hide();
-                        frmManejoFiesta frmFiesta = new frmManejoFiesta(conect, user, (FiestaEntidad)tablaInfo.SelectedRows[0].DataBoundItem);
-                        frmFiesta.ShowDialog();
-                        this.Show();
-                    }
-                    break;
-                case EtipoTabla.Animatronicos:
-                    if (await validarAdmin() && tablaInfo.SelectedRows.Count == 1)
-                    {
-                        this.Hide();
-                        AnimatronicoEntidad editando = (AnimatronicoEntidad)tablaInfo.SelectedRows[0].DataBoundItem;
-                        frmManejoAnimatronico frmNuevoAnimatronico = new frmManejoAnimatronico(conect, user, editando);
-                        frmNuevoAnimatronico.ShowDialog();
-                        this.Show();
-                    }
-                    break;
-                case EtipoTabla.Usuarios:
-                    if(await validarAdmin() && tablaInfo.SelectedRows.Count == 1)
-                    {
-                        this.Hide();
-                        UsuarioEntidad usereditando = (UsuarioEntidad)tablaInfo.SelectedRows[0].DataBoundItem;
-                        frmManejoUsuario frmNuevoUser = new frmManejoUsuario(conect, usereditando);
-                        frmNuevoUser.ShowDialog();
-                        this.Show();
-                    }
-                    break;
-
+                if (((InterfazEntidades)tablaInfo.SelectedRows[0].DataBoundItem).Activo)
+                {
+                    entrar = false;
+                }
             }
+            if(entrar)
+            {
+                switch (tipo)
+                {
+                    case EtipoTabla.Fiestas:
+                        if (tablaInfo.SelectedRows.Count == 1)
+                        {
+                            this.Hide();
+                            frmManejoFiesta frmFiesta = new frmManejoFiesta(conect, user, (FiestaEntidad)tablaInfo.SelectedRows[0].DataBoundItem);
+                            frmFiesta.ShowDialog();
+                            this.Show();
+                        }
+                        break;
+                    case EtipoTabla.Animatronicos:
+                        if (await validarAdmin() && tablaInfo.SelectedRows.Count == 1)
+                        {
+                            this.Hide();
+                            AnimatronicoEntidad editando = (AnimatronicoEntidad)tablaInfo.SelectedRows[0].DataBoundItem;
+                            frmManejoAnimatronico frmNuevoAnimatronico = new frmManejoAnimatronico(conect, user, editando);
+                            frmNuevoAnimatronico.ShowDialog();
+                            this.Show();
+                        }
+                        break;
+                    case EtipoTabla.Usuarios:
+                        if (await validarAdmin() && tablaInfo.SelectedRows.Count == 1)
+                        {
+                            this.Hide();
+                            UsuarioEntidad usereditando = (UsuarioEntidad)tablaInfo.SelectedRows[0].DataBoundItem;
+                            frmManejoUsuario frmNuevoUser = new frmManejoUsuario(conect, usereditando);
+                            frmNuevoUser.ShowDialog();
+                            this.Show();
+                        }
+                        break;
+                }
+            }
+
             ActualizarTabla();
             
         }
+
 
         private void btn_editar_MouseEnter(object sender, EventArgs e)
         {
@@ -204,20 +214,31 @@ namespace RENT_A_TRONIC
             FrmConfirmar pregunta = new FrmConfirmar("Borrar?");
             bool selected = false;
             InterfazEntidades borrando = new T();
-            if(tablaInfo.SelectedRows.Count == 1) 
+            bool entrar = true;
+            if (tablaInfo.SelectedRows.Count == 1)
             {
-                borrando = (InterfazEntidades)tablaInfo.SelectedRows[0].DataBoundItem;
-                selected = true;
-            }
-            DialogResult result;
-            if((tipo == EtipoTabla.Fiestas || await validarAdmin()) && selected)
-            {
-                result = pregunta.ShowDialog();
-                pregunta.Dispose();
-                if (result == DialogResult.Yes)
+                if (((InterfazEntidades)tablaInfo.SelectedRows[0].DataBoundItem).Activo)
                 {
-                    borrando.Activo = false;
-                    borrando.ActualizarEntradaEnLaTabla(conect);
+                    entrar = false;
+                }
+            }
+            if (entrar)
+            {
+                if (tablaInfo.SelectedRows.Count == 1)
+                {
+                    borrando = (InterfazEntidades)tablaInfo.SelectedRows[0].DataBoundItem;
+                    selected = true;
+                }
+                DialogResult result;
+                if ((tipo == EtipoTabla.Fiestas || await validarAdmin()) && selected)
+                {
+                    result = pregunta.ShowDialog();
+                    pregunta.Dispose();
+                    if (result == DialogResult.Yes)
+                    {
+                        borrando.Activo = false;
+                        borrando.ActualizarEntradaEnLaTabla(conect);
+                    }
                 }
             }
             ActualizarTabla();
@@ -261,6 +282,21 @@ namespace RENT_A_TRONIC
                         cell.Style.BackColor = Color.Red;
                     }
                 }
+            }
+
+        }
+        public void AsignarTipo()
+        {
+            InterfazEntidades asignarTipo = new T();
+            switch (asignarTipo.NombreTabla)
+            {
+                case "animatronicos":
+                    this.tipo = EtipoTabla.Animatronicos;
+                    break;
+                case "fiestas":
+                    this.tipo = EtipoTabla.Fiestas; break;
+                case "usuarios":
+                    this.tipo = EtipoTabla.Usuarios; break;
             }
         }
     }

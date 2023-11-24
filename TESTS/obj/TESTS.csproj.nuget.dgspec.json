@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\TESTS\\TESTS.csproj": {}
+    "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\TESTS\\TESTS.csproj": {}
   },
   "projects": {
-    "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\BACK.csproj": {
+    "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\Entidades\\BACK.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\BACK.csproj",
+        "projectUniqueName": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\Entidades\\BACK.csproj",
         "projectName": "BACK",
-        "projectPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\BACK.csproj",
+        "projectPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\Entidades\\BACK.csproj",
         "packagesPath": "C:\\Users\\Uriel\\.nuget\\packages\\",
-        "outputPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\obj\\",
+        "outputPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Uriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -65,14 +65,14 @@
         }
       }
     },
-    "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\TESTS\\TESTS.csproj": {
+    "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\TESTS\\TESTS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\TESTS\\TESTS.csproj",
+        "projectUniqueName": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\TESTS\\TESTS.csproj",
         "projectName": "TESTS",
-        "projectPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\TESTS\\TESTS.csproj",
+        "projectPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\TESTS\\TESTS.csproj",
         "packagesPath": "C:\\Users\\Uriel\\.nuget\\packages\\",
-        "outputPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\TESTS\\obj\\",
+        "outputPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\TESTS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Uriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,8 +89,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\BACK.csproj": {
-                "projectPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\BACK.csproj"
+              "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\Entidades\\BACK.csproj": {
+                "projectPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\Entidades\\BACK.csproj"
               }
             }
           }

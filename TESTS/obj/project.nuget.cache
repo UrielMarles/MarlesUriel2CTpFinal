@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n4mIyZPCsD4vgV9/X4lI2xIjrJXn5I3DN6yBcqT3ucqqXEVQiITZJZ7yPUXVB2G3/2oSyGaw+sEDRoDlYYuj7g==",
+  "dgSpecHash": "LwtsZGVY24W8Mgcfl+QU2Bg9Gzn/UqASujlzt2avDO5JVBk9PgH+TSh3NMJjvs9pXcG8LWCIrpp4Zj9aoYXYgQ==",
   "success": true,
-  "projectFilePath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\TESTS\\TESTS.csproj",
+  "projectFilePath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\TESTS\\TESTS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Uriel\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\Uriel\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",

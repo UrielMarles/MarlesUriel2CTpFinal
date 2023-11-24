@@ -53,7 +53,6 @@ namespace RENT_A_TRONIC
             int DineroGanado = 0;
             int AlmasGanadas = 0;
             int nuevasDenuncias = 0;
-            int nuevasVentas = 0;
             Random random = new Random();
             List<InterfazEntidades> entidadesActualizar = new List<InterfazEntidades> { };
             ColeccionEntidades<FiestaEntidad> fiestasTotales = new ColeccionEntidades<FiestaEntidad>(conect);

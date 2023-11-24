@@ -1,0 +1,9 @@
+id,lugar,activo,precio,nombre,telefonoCliente,correoCliente,adminFiestaId,fecha
+0,Alto Avellaneda,True,1000,Ferraresi,+54 9 11 3426 4583,ferra@gmail.com,1,2023-12-31
+1,Spurr 579,True,500,Uriel,+54 9 11 65541 4583,uru@gmail.com,2,2023-12-01
+2,New York,True,1500,wacho2,+54 9 11 65541 4583,anim@gmail.com,2,2023-12-03
+3,New York2,True,1500,wacho3,+54 9 11546456 dsadsa65541 4583,anim2@gmail.com,2,2023-12-04
+4,New York3,True,1500,wacho4,+54 9 6456 65541 4583,anim3@gmail.com,2,2023-12-05
+5,New York4,True,1500,wacho5,+54 456454656459 11 65541 4583,anim4@gmail.com,2,2023-12-06
+6,New York5,True,1500,wacho6,+54 9645645 11 65541 4583,anim5@gmail.com,2,2023-12-07
+7,New York6,True,1500,wacho7,+54 9 14564651 65541 4583,anim6@gmail.com,2,2023-12-08

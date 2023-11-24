@@ -475,11 +475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\BACK.csproj",
+      "projectUniqueName": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\Entidades\\BACK.csproj",
       "projectName": "BACK",
-      "projectPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\BACK.csproj",
+      "projectPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\Entidades\\BACK.csproj",
       "packagesPath": "C:\\Users\\Uriel\\.nuget\\packages\\",
-      "outputPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\obj\\",
+      "outputPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Uriel\\AppData\\Roaming\\NuGet\\NuGet.Config",

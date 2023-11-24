@@ -1,3 +1,6 @@
+NOTAs: 
+-la connection string hay que cambiarla ya que la actual connection string contiene el nombre de mi computadora. Para poder conectarse con el servidor
+-la previsualizacion de frmTablas no se ve porque implementa un generico en la instancia y no sabe como interpretarlo, pero a la hora de correr el programa, este funciona perfectamente.
 ![logo-proyecto](RENT-A-TRONIC/IMAGENES/FONDOS/TITULO.gif)
 # Rent-a-tronic - Entrega 2do TP Integrador
 

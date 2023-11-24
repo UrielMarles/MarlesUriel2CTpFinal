@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q2TJPq7jPRUbUO7sY2nnxfVqvkE53pvisA6qqDf98nzip29ne5mgZjAvZcgMIYdWpVHBX0TvHZYB6iversrw8A==",
+  "dgSpecHash": "yIdRhO6mlXzphU23JIYeUeMzKGa/RBDE9jb/ucdRUW/YVROcLbU4MOYJRKFmyIUO13IM9ueYKyz3Xi8qcfiUrA==",
   "success": true,
-  "projectFilePath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\BACK.csproj",
+  "projectFilePath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\Entidades\\BACK.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Uriel\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Uriel\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

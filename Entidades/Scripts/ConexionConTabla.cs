@@ -34,6 +34,12 @@ namespace BACK
             }
         }
 
+        /// <summary>
+        /// Ejecuta una consulta SQL proporcionada como cadena y devuelve los resultados en forma de lista de diccionarios.
+        /// </summary>
+        /// <param name="comandoString">Cadena SQL que representa la consulta a ejecutar.</param>
+        /// <returns>Lista de diccionarios que representan las filas y columnas resultantes de la consulta.</returns>
+        /// <exception cref="ExcepcionQueryFallida">Se produce si la consulta no puede ejecutarse correctamente o si se encuentra un valor nulo en la tabla.</exception>
         public List<Dictionary<string,string>> LecturaCompleta(string comandoString)
         {
             try
@@ -93,6 +99,12 @@ namespace BACK
 
         }
 
+        /// <summary>
+        /// Carga una nueva fila en la tabla especificada utilizando un diccionario de valores.
+        /// </summary>
+        /// <param name="dic">Diccionario que contiene los valores de la nueva fila.</param>
+        /// <param name="tabla">Nombre de la tabla en la que se desea cargar la nueva fila.</param>
+        /// <exception cref="ExcecpcionEjecutandoComandoSql">Se produce cuando el diccionario contiene una clave "id" con un valor distinto de "-1".</exception>
         public void CargarNuevaFila(Dictionary<string, string> dic,string tabla) 
         {
             if(dic.ContainsKey("id")) 
@@ -125,6 +137,15 @@ namespace BACK
             this.Ejecutar(cargaTraducida);
         }
 
+        /// <summary>
+        /// Actualiza la información de una fila en la tabla especificada con los nuevos valores proporcionados en un diccionario.
+        /// </summary>
+        /// <param name="dic">Diccionario que contiene los nuevos valores a actualizar en la fila.</param>
+        /// <param name="tabla">Nombre de la tabla en la que se desea realizar la actualización.</param>
+        /// <exception cref="ExcecpcionEjecutandoComandoSql">
+        /// Se produce si la id especificada en el diccionario es igual a -1,
+        /// o si no se proporciona una id para identificar la fila a actualizar.
+        /// </exception>
         public void CambiarInformacionFila(Dictionary<string, string> dic, string tabla)
         {
             string id;

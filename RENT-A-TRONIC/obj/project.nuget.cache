@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EnFsgJ4HHf9YNAYRuovYZvRdpJ8RUZWHyzCm45lppXv/tNl7DfdVQN1kxEg2U2BRQOKp08wp8roshOVgwFu0/A==",
+  "dgSpecHash": "bSE4MNnEiCBmtJhix9Fb8aZsXrk5IhNB9PjazviT2Ng+/75pPtf+mDc3CAZwzT9E2/zCbEQq0iKU+IT3K/GoEQ==",
   "success": true,
-  "projectFilePath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\RENT-A-TRONIC\\FRONT.csproj",
+  "projectFilePath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\RENT-A-TRONIC\\FRONT.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Uriel\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Uriel\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

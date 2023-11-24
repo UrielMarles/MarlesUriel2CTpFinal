@@ -493,11 +493,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\RENT-A-TRONIC\\FRONT.csproj",
+      "projectUniqueName": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\RENT-A-TRONIC\\FRONT.csproj",
       "projectName": "FRONT",
-      "projectPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\RENT-A-TRONIC\\FRONT.csproj",
+      "projectPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\RENT-A-TRONIC\\FRONT.csproj",
       "packagesPath": "C:\\Users\\Uriel\\.nuget\\packages\\",
-      "outputPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\RENT-A-TRONIC\\obj\\",
+      "outputPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\RENT-A-TRONIC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Uriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -514,8 +514,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\BACK.csproj": {
-              "projectPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2\\Entidades\\BACK.csproj"
+            "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\Entidades\\BACK.csproj": {
+              "projectPath": "D:\\UTN\\CUATRIDOS\\PROGRALABO\\INTEGRADOR2 - copia\\Entidades\\BACK.csproj"
             }
           }
         }
