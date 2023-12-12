@@ -1,8 +1,4 @@
 ![logo-proyecto](RENT-A-TRONIC/IMAGENES/FONDOS/TITULO.gif)
-# Rent-a-tronic - Entrega 2do TP Integrador
-
-**Alumno:** Uriel Nicolás Marlés  
-**División:** 2C
 
 ## Objetivo del Programa
 
